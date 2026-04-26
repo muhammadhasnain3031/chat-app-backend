@@ -14,7 +14,8 @@ const io = new Server(server, {
 });
 
 app.use(cors({
-  origin: "https://chat-app-frontend-aapka-url.vercel.app", 
+  origin: "https://chat-app-frontend-peach-two.vercel.app", // Aapka naya live frontend link
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 app.use(express.json());
