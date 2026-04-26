@@ -10,8 +10,7 @@ const server = http.createServer(app);  // http server banao
 
 // Socket.io initialize karo — express ke saath
 const io = new Server(server, {
-  cors: { origin: 'http://localhost:3000', methods: ['GET', 'POST'] }
-});
+cors: { origin: "https://chat-app-frontend-peach-two.vercel.app", methods: ["GET", "POST"] }});
 
 app.use(cors({
   origin: "https://chat-app-frontend-peach-two.vercel.app", // Aapka naya live frontend link
