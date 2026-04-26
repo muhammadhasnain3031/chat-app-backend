@@ -9,11 +9,18 @@ const app    = express();
 const server = http.createServer(app);  // http server banao
 
 // Socket.io initialize karo — express ke saath
+// Socket.io initialization with CORS
 const io = new Server(server, {
-cors: { origin: "https://chat-app-frontend-peach-two.vercel.app", methods: ["GET", "POST"] }});
+  cors: {
+    origin: "https://chat-app-frontend-peach-two.vercel.app",
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+});
 
+// Express CORS middleware
 app.use(cors({
-  origin: "https://chat-app-frontend-peach-two.vercel.app", // Aapka naya live frontend link
+  origin: "https://chat-app-frontend-peach-two.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
