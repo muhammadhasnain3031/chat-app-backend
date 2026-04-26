@@ -20,9 +20,10 @@ const io = new Server(server, {
 
 // Express CORS middleware
 app.use(cors({
-  origin: "https://chat-app-frontend-peach-two.vercel.app",
+  origin: "https://chat-app-frontend-peach-two.vercel.app", // Spelling check kar lain
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
